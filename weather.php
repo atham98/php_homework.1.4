@@ -1,6 +1,9 @@
 <?php 
 
-$link_weather = 'http://api.openweathermap.org/data/2.5/weather?id=1497917&appid=de649efb6c4dc96d792106d010e18149';
+$id = 'weather?id=1497917';
+$appid = 'appid=de649efb6c4dc96d792106d010e18149';
+
+$link_weather = "http://api.openweathermap.org/data/2.5/" . $id . "&" . $appid;
 $response = file_get_contents($link_weather);
 $weather =  json_decode($response, true);
 
